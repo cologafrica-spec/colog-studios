@@ -61,6 +61,8 @@
   .fellowship-link{ display:flex; flex-direction:column; align-items:flex-end; gap:6px; font-size:13.5px; color:#F4F5EF; }
   .fellowship-link .label{ font-family:'IBM Plex Mono', monospace; font-size:9.5px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(244,245,239,0.5); }
   .fellowship-link .name{ padding-bottom:3px; border-bottom:1px solid rgba(244,245,239,0.45); }
+  .linkedin-link{ position:absolute; right:clamp(24px,4.5vw,56px); bottom:clamp(20px,3.2vw,36px); font-size:13.5px; color:#F4F5EF; }
+  .linkedin-link .name{ padding-bottom:3px; border-bottom:1px solid rgba(244,245,239,0.45); }
 
   /* ---------- Headline ---------- */
   .hero-text{ position:absolute; left:clamp(24px,4.5vw,56px); bottom:clamp(48px,9vh,110px); right:clamp(24px,4.5vw,56px); }
@@ -68,14 +70,14 @@
   .eyebrow .dot{ width:6px; height:6px; border-radius:50%; background:#FF4433; }
   h1{
     margin:0; font-weight:700; letter-spacing:-0.02em; color:#F7F8F2;
-    font-size:clamp(52px,10vw,158px); line-height:0.94;
+    font-size:clamp(36px,7.2vw,120px); line-height:1.02;
   }
   h1 .accent{ color:#B7CE9A; }
 
   @media (max-width:640px){
     nav{ flex-wrap:wrap; row-gap:8px; }
     .fellowship-link{ margin-left:auto; text-align:right; font-size:11.5px; }
-    h1{ font-size:clamp(40px,13vw,80px); }
+    h1{ font-size:clamp(26px,9vw,48px); }
   }
 </style>
 </head>
@@ -88,15 +90,17 @@
 
   <div class="content">
     <nav>
-      <div class="mark"><span class="ring"></span>CoLoG<span class="sub">Studios</span></div>
+      <div class="mark"><span class="ring"></span>CoLoG<span class="sub">Africa</span></div>
       <a class="fellowship-link" href="https://docs.google.com/document/d/1fSGEIkpnxqmwj7YCivTP8CRHVeFztchXfJeEvv4raAE/edit?usp=sharing" target="_blank" rel="noopener">
         <span class="name">AI Safety x Content Fellowship</span>
       </a>
     </nav>
 
     <div class="hero-text">
-      <h1>AI Safety<br><span class="accent">Bootcamps</span></h1>
+      <h1>Accelerating AI<br>Safety Talent<br><span class="accent">In Africa</span></h1>
     </div>
+
+    <a class="linkedin-link" href="https://www.linkedin.com/company/colog-africa/" target="_blank" rel="noopener"><span class="name">LinkedIn</span></a>
   </div>
 </div>
 
