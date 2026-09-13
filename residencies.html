@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<title>CoLoG Africa</title>
+<meta name="description" content="CoLoG Africa is an independent talent accelerator for machine learning, robotics and AI safety.">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #FBFAF7; }
+  * { box-sizing: border-box; }
+  a { color: inherit; text-decoration: none; }
+  .scan { background-image: repeating-linear-gradient(180deg, rgba(0,0,0,0.035) 0 1px, rgba(0,0,0,0) 1px 3px); }
+  @keyframes cg-spin { to { transform: rotate(360deg); } }
+  @keyframes cg-breathe { 0%,100% { opacity:0.5; } 50% { opacity:1; } }
+</style>
+</helmet>
+
+<div style="font-family:'Schibsted Grotesk',Helvetica,Arial,sans-serif; background:#FBFAF7; color:#121711; width:100%; overflow-x:hidden; -webkit-font-smoothing:antialiased">
+
+  <nav style="position:sticky; top:0; z-index:30; background:rgba(251,250,247,0.88); backdrop-filter:blur(10px); border-bottom:1px solid #E6E4DB; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:18px clamp(20px,4vw,64px); flex-wrap:wrap">
+    <a href="index.html" style="display:flex; align-items:center; gap:12px">
+      <span style="width:10px; height:10px; border-radius:50%; background:#FF4B2E; display:block"></span>
+      <span style="font-weight:700; font-size:20px; letter-spacing:-0.035em">CoLoG</span>
+      <span style="width:1px; height:18px; background:#C9CDC1; display:block"></span>
+      <span style="font-weight:400; font-size:14px; letter-spacing:0.22em; color:#5C6558">AFRICA</span>
+    </a>
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex; align-items:center; gap:28px; font-size:14.5px; color:#3A4136">
+        <a href="index.html#programmes" style="border-bottom:1px solid #3A4136; padding-bottom:3px">Programmes</a>
+        <a href="index.html#about">About</a>
+        <a href="#apply">Register interest</a>
+      </div>
+    </sc-if>
+    <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{ toggleMenu }}" aria-label="Menu" style="display:flex; flex-direction:column; gap:5px; width:46px; height:46px; align-items:center; justify-content:center; border:1px solid #D4D2C7; border-radius:999px; background:transparent; cursor:pointer">
+        <span style="display:block; width:18px; height:1.5px; background:#121711"></span>
+        <span style="display:block; width:18px; height:1.5px; background:#121711"></span>
+      </button>
+    </sc-if>
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="width:100%; display:flex; flex-direction:column; gap:2px; padding-top:14px; margin-top:14px; border-top:1px solid #E6E4DB">
+        <a href="index.html#programmes" onClick="{{ closeMenu }}" style="font-size:18px; padding:14px 0; border-bottom:1px solid #E6E4DB">Programmes</a>
+        <a href="index.html#about" onClick="{{ closeMenu }}" style="font-size:18px; padding:14px 0; border-bottom:1px solid #E6E4DB">About</a>
+        <a href="#apply" onClick="{{ closeMenu }}" style="font-size:18px; padding:14px 0; color:#121711">Register interest</a>
+      </div>
+    </sc-if>
+  </nav>
+
+  <section class="scan" style="position:relative; background:linear-gradient(180deg,#FBFAF7 0%,#F3F3EB 42%,#DCE6CE 100%); padding:clamp(48px,7vw,96px) clamp(20px,4vw,64px) clamp(48px,6vw,80px)">
+    <div style="max-width:900px; margin:0 auto; display:flex; flex-direction:column; align-items:center; text-align:center">
+      <div style="display:flex; align-items:center; justify-content:center; gap:10px; font-size:13px; color:#5C6558; margin-bottom:clamp(32px,5vw,56px)">
+        <a href="index.html#programmes">Programmes</a>
+        <span style="color:#6E7468">/</span>
+        <span style="color:#121711">CoLoG Residencies</span>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:22px">
+        <span style="width:8px; height:8px; border-radius:50%; background:#FF4B2E; animation:cg-breathe 3s ease-in-out infinite"></span>
+        <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#4A5044">Opening soon</span>
+      </div>
+      <h1 style="font-weight:700; font-size:clamp(38px,7.4vw,92px); line-height:0.98; letter-spacing:-0.04em; margin:0; max-width:18ch; color:#121711; text-wrap:balance">CoLoG Residencies</h1>
+      <p style="margin:clamp(22px,3vw,34px) 0 0; font-size:clamp(17px,2vw,22px); line-height:1.5; max-width:52ch; color:#3A4136">The hardest six months of a young African's life. A full-time, fully funded residency for people transitioning into AI and AI safety.</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:clamp(26px,3vw,36px)">
+        <a href="#apply" style="font-size:16px; font-weight:700; background:#E33C1F; color:#FFFFFF; padding:14px 26px; border-radius:999px; display:inline-flex; align-items:center; white-space:nowrap">Register interest</a>
+        <a href="#curriculum" style="font-size:15px; font-weight:600; border:1px solid #121711; color:#121711; padding:14px 26px; border-radius:999px; display:inline-flex; align-items:center; white-space:nowrap">See the curriculum</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#F2F1EA; padding:clamp(28px,3.5vw,44px) clamp(20px,4vw,64px)">
+    <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:clamp(24px,4vw,48px)">
+      <div style="display:flex; flex-direction:column; gap:8px"><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Length</div><div style="font-size:19px; font-weight:600; color:#121711">Six months</div></div>
+      <div style="display:flex; flex-direction:column; gap:8px"><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Cost</div><div style="font-size:19px; font-weight:600; color:#121711">Fully funded</div></div>
+      <div style="display:flex; flex-direction:column; gap:8px"><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Format</div><div style="font-size:19px; font-weight:600; color:#121711">Cohort based</div></div>
+      <div style="display:flex; flex-direction:column; gap:8px"><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Commitment</div><div style="font-size:19px; font-weight:600; color:#121711">Full time</div></div>
+    </div>
+  </section>
+
+
+  <section id="curriculum" style="border-top:1px solid #E6E4DB; max-width:1440px; margin:0 auto; padding:clamp(56px,7vw,96px) clamp(20px,4vw,64px)">
+    <h2 style="font-weight:700; font-size:clamp(28px,3.8vw,48px); line-height:1.0; letter-spacing:-0.04em; margin:0 0 clamp(32px,4vw,52px); color:#121711">Choose your depth</h2>
+    <p style="margin:0 0 clamp(32px,4vw,48px); font-size:18px; line-height:1.6; color:#3A4136; max-width:56ch">Everyone builds the same foundations. From there you challenge yourself to go deep in one track.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+      <div style="border:1px solid #E0DED4; margin:0 -1px -1px 0; padding:30px; display:flex; flex-direction:column; gap:12px; background:#FFFFFF">
+        <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Foundations</div>
+        <div style="font-weight:700; font-size:22px; letter-spacing:-0.035em; color:#121711">Machine learning fundamentals</div>
+        <p style="margin:0; font-size:16px; line-height:1.6; color:#4A5044">Training, optimisation and the mathematics underneath them, built up until the abstractions stop being abstract.</p>
+      </div>
+      <div style="border:1px solid #E0DED4; margin:0 -1px -1px 0; padding:30px; display:flex; flex-direction:column; gap:12px; background:#FFFFFF">
+        <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Track</div>
+        <div style="font-weight:700; font-size:22px; letter-spacing:-0.035em; color:#121711">Interpretability</div>
+        <p style="margin:0; font-size:16px; line-height:1.6; color:#4A5044">Open the model. Find the features, circuits and representations that explain what it is doing.</p>
+      </div>
+      <div style="border:1px solid #E0DED4; margin:0 -1px -1px 0; padding:30px; display:flex; flex-direction:column; gap:12px; background:#FFFFFF">
+        <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Track</div>
+        <div style="font-weight:700; font-size:22px; letter-spacing:-0.035em; color:#121711">Reinforcement learning</div>
+        <p style="margin:0; font-size:16px; line-height:1.6; color:#4A5044">How systems learn from feedback, where that goes wrong, and what specification failures look like in practice.</p>
+      </div>
+      <div style="border:1px solid #E0DED4; margin:0 -1px -1px 0; padding:30px; display:flex; flex-direction:column; gap:12px; background:#FFFFFF">
+        <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Track</div>
+        <div style="font-weight:700; font-size:22px; letter-spacing:-0.035em; color:#121711">LLM evaluation</div>
+        <p style="margin:0; font-size:16px; line-height:1.6; color:#4A5044">Design and run evaluations that hold up, including in languages the frontier labs have barely tested.</p>
+      </div>
+      <div style="border:1px solid #E0DED4; margin:0 -1px -1px 0; padding:30px; display:flex; flex-direction:column; gap:12px; background:#FFFFFF">
+        <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Track</div>
+        <div style="font-weight:700; font-size:22px; letter-spacing:-0.035em; color:#121711">AI security</div>
+        <p style="margin:0; font-size:16px; line-height:1.6; color:#4A5044">Adversarial behaviour, misuse, model and infrastructure security, and the failure modes that arrive on deployment.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section style="border-top:1px solid #E6E4DB; max-width:1440px; margin:0 auto; padding:clamp(56px,7vw,96px) clamp(20px,4vw,64px); display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(36px,5vw,72px)">
+    <div>
+      <h2 style="font-weight:700; font-size:clamp(28px,3.8vw,48px); line-height:1.0; letter-spacing:-0.04em; margin:0 0 20px; color:#121711">Who we look for</h2>
+      <p style="margin:0; font-size:18px; line-height:1.6; color:#3A4136; max-width:46ch">We are not looking for people who already do AI safety. Most residents will be new to it. We are looking for people who will challenge themselves to go quantitative, and who will burn the midnight oil to get there.</p>
+    </div>
+    <div style="display:flex; flex-direction:column">
+      <div style="border-top:1px solid #E0DED4; padding:20px 0; display:flex; gap:18px"><span style="font-size:13px; color:#5C6558; min-width:28px">01</span><span style="font-size:17px; line-height:1.55; color:#3A4136">Willingness to learn everything from scratch. No prior experience in the space is required.</span></div>
+      <div style="border-top:1px solid #E0DED4; padding:20px 0; display:flex; gap:18px"><span style="font-size:13px; color:#5C6558; min-width:28px">02</span><span style="font-size:17px; line-height:1.55; color:#3A4136">Evidence that you finish hard things without being managed.</span></div>
+      <div style="border-top:1px solid #E0DED4; padding:20px 0; display:flex; gap:18px"><span style="font-size:13px; color:#5C6558; min-width:28px">03</span><span style="font-size:17px; line-height:1.55; color:#3A4136">A reason you care about how these systems behave, stated plainly.</span></div>
+      <div style="border-top:1px solid #E0DED4; border-bottom:1px solid #E0DED4; padding:20px 0; display:flex; gap:18px"><span style="font-size:13px; color:#5C6558; min-width:28px">04</span><span style="font-size:17px; line-height:1.55; color:#3A4136">Availability for six months, full time, with no split attention.</span></div>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid #E6E4DB; max-width:1440px; margin:0 auto; padding:clamp(56px,7vw,96px) clamp(20px,4vw,64px)">
+    <h2 style="font-weight:700; font-size:clamp(28px,3.8vw,48px); line-height:1.0; letter-spacing:-0.04em; margin:0 0 clamp(32px,4vw,52px); color:#121711">How selection works</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:clamp(28px,4vw,48px)">
+      <div style="border-top:2px solid #FF4B2E; padding-top:20px; display:flex; flex-direction:column; gap:10px">
+        <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Step one</div>
+        <div style="font-weight:700; font-size:20px; letter-spacing:-0.03em; color:#121711">Written application</div>
+        <p style="margin:0; font-size:16px; line-height:1.6; color:#4A5044">Background, motivation and a short technical exercise.</p>
+      </div>
+      <div style="border-top:2px solid #D4D2C7; padding-top:20px; display:flex; flex-direction:column; gap:10px">
+        <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Step two</div>
+        <div style="font-weight:700; font-size:20px; letter-spacing:-0.03em; color:#121711">Technical interview</div>
+        <p style="margin:0; font-size:16px; line-height:1.6; color:#4A5044">A conversation about how you think, not a quiz on what you memorised.</p>
+      </div>
+            <div style="border-top:2px solid #D4D2C7; padding-top:20px; display:flex; flex-direction:column; gap:10px">
+        <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Step three</div>
+        <div style="font-weight:700; font-size:20px; letter-spacing:-0.03em; color:#121711">Offer</div>
+        <p style="margin:0; font-size:16px; line-height:1.6; color:#4A5044">A funded place in the cohort, with a stipend for the duration.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid #E6E4DB; max-width:1440px; margin:0 auto; padding:clamp(56px,7vw,96px) clamp(20px,4vw,64px)">
+    <h2 style="font-weight:700; font-size:clamp(28px,3.8vw,48px); line-height:1.0; letter-spacing:-0.04em; margin:0 0 clamp(28px,4vw,44px); color:#121711">What comes after</h2>
+    <div style="display:flex; flex-direction:column">
+      <a href="index.html#programmes" style="display:grid; grid-template-columns:minmax(0,2fr) minmax(0,3fr) 40px; gap:24px; padding:26px 0; border-top:1px solid #E6E4DB; align-items:baseline">
+        <div style="font-weight:600; font-size:clamp(19px,2.2vw,24px); letter-spacing:-0.03em; color:#121711">Safety Research Fellowship</div>
+        <div style="font-size:16px; line-height:1.55; color:#4A5044">Continue into funded research with a senior advisor.</div>
+        <div style="text-align:right; color:#5C6558">→</div>
+      </a>
+      <a href="index.html#programmes" style="display:grid; grid-template-columns:minmax(0,2fr) minmax(0,3fr) 40px; gap:24px; padding:26px 0; border-top:1px solid #E6E4DB; border-bottom:1px solid #E6E4DB; align-items:baseline">
+        <div style="font-weight:600; font-size:clamp(19px,2.2vw,24px); letter-spacing:-0.03em; color:#121711">Placement</div>
+        <div style="font-size:16px; line-height:1.55; color:#4A5044">Global fellowships, labs, companies, research groups, ministries and regulators.</div>
+        <div style="text-align:right; color:#5C6558">→</div>
+      </a>
+    </div>
+  </section>
+
+  <section id="apply" class="scan" style="background:linear-gradient(180deg,#FBFAF7 0%,#C4D5AF 100%); padding:clamp(56px,7vw,110px) clamp(20px,4vw,64px)">
+    <div style="max-width:1440px; margin:0 auto; display:flex; flex-wrap:wrap; gap:36px; align-items:end; justify-content:space-between">
+      <div>
+        <h2 style="font-weight:700; font-size:clamp(30px,4.4vw,58px); line-height:1.0; letter-spacing:-0.045em; margin:0 0 18px; max-width:16ch; color:#121711">Applications open soon</h2>
+        <p style="margin:0; font-size:17px; line-height:1.6; color:#2C3426; max-width:44ch">Register your interest and we will write to you when the first cohort opens.</p>
+      </div>
+      <a href="#apply" style="font-size:15px; font-weight:600; background:#121711; color:#FBFAF7; padding:15px 28px; border-radius:999px; display:inline-flex; align-items:center; white-space:nowrap">Register interest</a>
+    </div>
+  </section>
+
+  <footer style="background:#F2F1EA; border-top:1px solid #E6E4DB; color:#4A5044; padding:clamp(56px,6vw,88px) clamp(20px,4vw,64px) 40px">
+    <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:clamp(32px,4vw,56px)">
+      <a href="index.html" style="display:flex; align-items:center; gap:12px; align-self:start">
+        <span style="width:10px; height:10px; border-radius:50%; background:#FF4B2E; display:block"></span>
+        <span style="font-weight:700; font-size:20px; letter-spacing:-0.035em; color:#121711">CoLoG</span>
+        <span style="width:1px; height:18px; background:#C9CDC1; display:block"></span>
+        <span style="font-weight:400; font-size:14px; letter-spacing:0.22em; color:#5C6558">AFRICA</span>
+      </a>
+      <div style="display:flex; flex-direction:column; gap:12px; font-size:14px">
+        <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#5E655A">Organisation</div>
+        <a href="index.html#about">About us</a><a href="index.html#footer">Careers</a><a href="index.html#footer">Contact</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px; font-size:14px">
+        <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#5E655A">Programmes</div>
+        <a href="#top">CoLoG Residencies</a><a href="index.html#programmes">Safety Research Fellowship</a><a href="index.html#programmes">Placement</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px; font-size:14px">
+        <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#5E655A">Elsewhere</div>
+        <a href="https://www.linkedin.com/company/colog-africa/" target="_blank" rel="noopener">LinkedIn</a><a href="index.html#footer">X</a><a href="index.html#footer">Newsletter</a>
+      </div>
+    </div>
+    <div style="max-width:1440px; margin:clamp(40px,5vw,72px) auto 0; padding-top:24px; border-top:1px solid #E6E4DB; display:flex; flex-wrap:wrap; gap:20px; justify-content:space-between; font-size:13px; color:#5E655A">
+      <div>Chandos Gardens, LS8 1LW, United Kingdom</div>
+      <div>© 2026 CoLoG Africa</div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:2400}}">
+class Component extends DCLogic {
+  state = { w: typeof window !== "undefined" ? window.innerWidth : 1200, menuOpen: false };
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener("resize", this.onResize);
+  }
+  componentWillUnmount() { window.removeEventListener("resize", this.onResize); }
+  renderVals() {
+    const wide = this.state.w >= 860;
+    return {
+      wide,
+      narrow: !wide,
+      menuOpen: !wide && this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false })
+    };
+  }
+}
+</script>
+</body>
+</html>
