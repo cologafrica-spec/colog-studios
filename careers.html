@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<title>Careers | CoLoG Africa</title>
+<meta name="description" content="Become a Campus Lead: start an AI Paper Club at your university with CoLoG Africa.">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #FBFAF7; }
+  * { box-sizing: border-box; }
+  a { color: inherit; text-decoration: none; }
+  .scan { background-image: repeating-linear-gradient(180deg, rgba(0,0,0,0.035) 0 1px, rgba(0,0,0,0) 1px 3px); }
+  @keyframes cg-spin { to { transform: rotate(360deg); } }
+  @keyframes cg-breathe { 0%,100% { opacity:0.5; } 50% { opacity:1; } }
+</style>
+</helmet>
+
+<div style="font-family:'Schibsted Grotesk',Helvetica,Arial,sans-serif; background:#FBFAF7; color:#121711; width:100%; overflow-x:hidden; -webkit-font-smoothing:antialiased">
+
+  <nav style="position:sticky; top:0; z-index:30; background:rgba(251,250,247,0.88); backdrop-filter:blur(10px); border-bottom:1px solid #E6E4DB; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:18px clamp(20px,4vw,64px); flex-wrap:wrap">
+    <a href="index.html" style="display:flex; align-items:center; gap:12px">
+      <span style="width:10px; height:10px; border-radius:50%; background:#FF4B2E; display:block"></span>
+      <span style="font-weight:700; font-size:20px; letter-spacing:-0.035em">CoLoG</span>
+      <span style="width:1px; height:18px; background:#C9CDC1; display:block"></span>
+      <span style="font-weight:400; font-size:14px; letter-spacing:0.22em; color:#5C6558">AFRICA</span>
+    </a>
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex; align-items:center; gap:28px; font-size:14.5px; color:#3A4136">
+        <a href="index.html#programmes">Programmes</a>
+        <a href="index.html#about">About</a>
+        <a href="#apply">Apply</a>
+      </div>
+    </sc-if>
+    <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{ toggleMenu }}" aria-label="Menu" style="display:flex; flex-direction:column; gap:5px; width:46px; height:46px; align-items:center; justify-content:center; border:1px solid #D4D2C7; border-radius:999px; background:transparent; cursor:pointer">
+        <span style="display:block; width:18px; height:1.5px; background:#121711"></span>
+        <span style="display:block; width:18px; height:1.5px; background:#121711"></span>
+      </button>
+    </sc-if>
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="width:100%; display:flex; flex-direction:column; gap:2px; padding-top:14px; margin-top:14px; border-top:1px solid #E6E4DB">
+        <a href="index.html#programmes" onClick="{{ closeMenu }}" style="font-size:18px; padding:14px 0; border-bottom:1px solid #E6E4DB">Programmes</a>
+        <a href="index.html#about" onClick="{{ closeMenu }}" style="font-size:18px; padding:14px 0; border-bottom:1px solid #E6E4DB">About</a>
+        <a href="#apply" onClick="{{ closeMenu }}" style="font-size:18px; padding:14px 0; color:#121711">Apply</a>
+      </div>
+    </sc-if>
+  </nav>
+
+
+  <section class="scan" style="position:relative; background:linear-gradient(180deg,#FBFAF7 0%,#F3F3EB 42%,#DCE6CE 100%); padding:clamp(48px,7vw,96px) clamp(20px,4vw,64px) clamp(48px,6vw,80px)">
+    <div style="max-width:900px; margin:0 auto; display:flex; flex-direction:column; align-items:center; text-align:center">
+      <div style="display:flex; align-items:center; justify-content:center; gap:10px; font-size:13px; color:#5C6558; margin-bottom:clamp(32px,5vw,56px)">
+        <a href="careers.html">Careers</a>
+        <span style="color:#6E7468">/</span>
+        <span style="color:#121711">Campus Lead</span>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:22px">
+        <span style="width:8px; height:8px; border-radius:50%; background:#FF4B2E; animation:cg-breathe 3s ease-in-out infinite"></span>
+        <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#4A5044">Campus Lead Programme 2026</span>
+      </div>
+      <h1 style="font-weight:700; font-size:clamp(38px,7.4vw,92px); line-height:0.98; letter-spacing:-0.04em; margin:0; max-width:18ch; color:#121711; text-wrap:balance">Bring AI safety to your campus</h1>
+      <p style="margin:clamp(22px,3vw,34px) 0 0; font-size:clamp(17px,2vw,22px); line-height:1.5; max-width:52ch; color:#3A4136">Start an AI Paper Club at your university. Bring students together to read, discuss and think critically about the risks, opportunities and governance of artificial intelligence.</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:clamp(26px,3vw,36px)">
+        <a href="https://airtable.com/appa9xGmODXoIeoHM/pagP0ie7UR0P1bmk1/form" target="_blank" rel="noopener" style="font-size:16px; font-weight:700; background:#E33C1F; color:#FFFFFF; padding:14px 26px; border-radius:999px; display:inline-flex; align-items:center; white-space:nowrap">Apply to be a Campus Lead</a>
+        <a href="https://docs.google.com/document/d/1epuFxI4jcJepam84ZU0kVfniBuvr8gnS/edit" target="_blank" rel="noopener" style="font-size:15px; font-weight:600; border:1px solid #121711; color:#121711; padding:14px 26px; border-radius:999px; display:inline-flex; align-items:center; white-space:nowrap">Read the full details</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#F2F1EA; padding:clamp(28px,3.5vw,44px) clamp(20px,4vw,64px)">
+    <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:clamp(24px,4vw,48px)">
+      <div style="display:flex; flex-direction:column; gap:8px"><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Role</div><div style="font-size:19px; font-weight:600; color:#121711">Campus Lead</div></div>
+      <div style="display:flex; flex-direction:column; gap:8px"><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Programme</div><div style="font-size:19px; font-weight:600; color:#121711">AI Paper Club</div></div>
+      <div style="display:flex; flex-direction:column; gap:8px"><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Who</div><div style="font-size:19px; font-weight:600; color:#121711">University students</div></div>
+      <div style="display:flex; flex-direction:column; gap:8px"><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Year</div><div style="font-size:19px; font-weight:600; color:#121711">2026</div></div>
+    </div>
+  </section>
+
+  <section id="role" style="border-top:1px solid #E6E4DB; max-width:1440px; margin:0 auto; padding:clamp(56px,7vw,96px) clamp(20px,4vw,64px)">
+    <h2 style="font-weight:700; font-size:clamp(32px,4.6vw,60px); line-height:1.0; letter-spacing:-0.045em; margin:0 0 clamp(40px,5vw,64px); max-width:20ch; color:#121711">The role</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:clamp(28px,4vw,56px)">
+      <div style="display:flex; flex-direction:column; gap:12px">
+        <div aria-hidden="true" style="height:2px; background:#E33C1F; width:48px"></div>
+        <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558; margin-top:10px">One</div>
+        <div style="font-weight:700; font-size:clamp(22px,2.4vw,28px); letter-spacing:-0.035em; color:#121711">Start</div>
+        <p style="margin:0; font-size:17px; line-height:1.6; color:#3A4136">Launch an AI Paper Club at your university.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px">
+        <div aria-hidden="true" style="height:2px; background:#E33C1F; width:48px"></div>
+        <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558; margin-top:10px">Two</div>
+        <div style="font-weight:700; font-size:clamp(22px,2.4vw,28px); letter-spacing:-0.035em; color:#121711">Read</div>
+        <p style="margin:0; font-size:17px; line-height:1.6; color:#3A4136">Bring students together to read papers on AI safety and security.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px">
+        <div aria-hidden="true" style="height:2px; background:#E33C1F; width:48px"></div>
+        <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558; margin-top:10px">Three</div>
+        <div style="font-weight:700; font-size:clamp(22px,2.4vw,28px); letter-spacing:-0.035em; color:#121711">Think critically</div>
+        <p style="margin:0; font-size:17px; line-height:1.6; color:#3A4136">Discuss the risks, opportunities and governance of artificial intelligence.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="apply" class="scan" style="background:linear-gradient(180deg,#FBFAF7 0%,#C4D5AF 100%); padding:clamp(56px,7vw,110px) clamp(20px,4vw,64px)">
+    <div style="max-width:1440px; margin:0 auto; display:flex; flex-wrap:wrap; gap:36px; align-items:end; justify-content:space-between">
+      <div>
+        <h2 style="font-weight:700; font-size:clamp(30px,4.4vw,58px); line-height:1.0; letter-spacing:-0.045em; margin:0 0 18px; max-width:16ch; color:#121711">Apply to become a Campus Lead</h2>
+        <p style="margin:0; font-size:17px; line-height:1.6; color:#2C3426; max-width:44ch">Fill in the application form and we will be in touch. The full role description is in the details document.</p>
+      </div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap">
+        <a href="https://docs.google.com/document/d/1epuFxI4jcJepam84ZU0kVfniBuvr8gnS/edit" target="_blank" rel="noopener" style="font-size:15px; font-weight:600; border:1px solid #121711; color:#121711; padding:15px 28px; border-radius:999px; display:inline-flex; align-items:center; white-space:nowrap">Read the full details</a>
+        <a href="https://airtable.com/appa9xGmODXoIeoHM/pagP0ie7UR0P1bmk1/form" target="_blank" rel="noopener" style="font-size:15px; font-weight:600; background:#121711; color:#FBFAF7; padding:15px 28px; border-radius:999px; display:inline-flex; align-items:center; white-space:nowrap">Apply now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer" style="background:#F2F1EA; border-top:1px solid #E6E4DB; color:#4A5044; padding:clamp(56px,6vw,88px) clamp(20px,4vw,64px) 40px">
+    <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:clamp(32px,4vw,56px)">
+      <a href="index.html" style="display:flex; align-items:center; gap:12px; align-self:start">
+        <span style="width:10px; height:10px; border-radius:50%; background:#FF4B2E; display:block"></span>
+        <span style="font-weight:700; font-size:20px; letter-spacing:-0.035em; color:#121711">CoLoG</span>
+        <span style="width:1px; height:18px; background:#C9CDC1; display:block"></span>
+        <span style="font-weight:400; font-size:14px; letter-spacing:0.22em; color:#5C6558">AFRICA</span>
+      </a>
+      <div style="display:flex; flex-direction:column; gap:12px; font-size:14px">
+        <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#5E655A">Organisation</div>
+        <a href="index.html#about">About us</a><a href="careers.html">Careers</a><a href="index.html#footer">Contact</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px; font-size:14px">
+        <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#5E655A">Programmes</div>
+        <a href="index.html#programmes">AI Paper Club</a><a href="residencies.html">CoLoG Residency</a><a href="residencies.html">AI Security Residency</a><a href="index.html#programmes">Context Research</a><a href="index.html#programmes">AI Safety x Content</a><a href="index.html#programmes">Vouch</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px; font-size:14px">
+        <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#5E655A">Elsewhere</div>
+        <a href="https://www.linkedin.com/company/colog-africa/" target="_blank" rel="noopener">LinkedIn</a><a href="index.html#footer">X</a><a href="index.html#footer">Newsletter</a>
+      </div>
+    </div>
+    <div style="max-width:1440px; margin:clamp(40px,5vw,72px) auto 0; padding-top:24px; border-top:1px solid #E6E4DB; display:flex; flex-wrap:wrap; gap:20px; justify-content:space-between; font-size:13px; color:#5E655A">
+      <div>Chandos Gardens, LS8 1LW, United Kingdom</div>
+      <div>© 2026 CoLoG Africa</div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:2400}}">
+class Component extends DCLogic {
+  state = { w: typeof window !== "undefined" ? window.innerWidth : 1200, menuOpen: false };
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener("resize", this.onResize);
+  }
+  componentWillUnmount() { window.removeEventListener("resize", this.onResize); }
+  renderVals() {
+    const wide = this.state.w >= 860;
+    return {
+      wide,
+      narrow: !wide,
+      menuOpen: !wide && this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false })
+    };
+  }
+}
+</script>
+</body>
+</html>
