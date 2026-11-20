@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<title>AI Security Residency | CoLoG Africa</title>
+<meta name="description" content="A free 12-week, beginner-level AI security programme from CoLoG Africa, built on the ARENA prerequisites and the AISB curriculum.">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #FBFAF7; }
+  * { box-sizing: border-box; }
+  a { color: inherit; text-decoration: none; }
+  .scan { background-image: repeating-linear-gradient(180deg, rgba(0,0,0,0.035) 0 1px, rgba(0,0,0,0) 1px 3px); }
+  @keyframes cg-spin { to { transform: rotate(360deg); } }
+  @keyframes cg-breathe { 0%,100% { opacity:0.5; } 50% { opacity:1; } }
+</style>
+</helmet>
+
+<div style="font-family:'Schibsted Grotesk',Helvetica,Arial,sans-serif; background:#FBFAF7; color:#121711; width:100%; overflow-x:hidden; -webkit-font-smoothing:antialiased">
+
+  <nav style="position:sticky; top:0; z-index:30; background:rgba(251,250,247,0.88); backdrop-filter:blur(10px); border-bottom:1px solid #E6E4DB; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:18px clamp(20px,4vw,64px); flex-wrap:wrap">
+    <a href="index.html" style="display:flex; align-items:center; gap:12px">
+      <span style="width:10px; height:10px; border-radius:50%; background:#FF4B2E; display:block"></span>
+      <span style="font-weight:700; font-size:20px; letter-spacing:-0.035em">CoLoG</span>
+      <span style="width:1px; height:18px; background:#C9CDC1; display:block"></span>
+      <span style="font-weight:400; font-size:14px; letter-spacing:0.22em; color:#5C6558">AFRICA</span>
+    </a>
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex; align-items:center; gap:28px; font-size:14.5px; color:#3A4136">
+        <a href="index.html#programmes">Programmes</a>
+        <a href="index.html#about">About</a>
+        <a href="#apply">Apply</a>
+      </div>
+    </sc-if>
+    <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{ toggleMenu }}" aria-label="Menu" style="display:flex; flex-direction:column; gap:5px; width:46px; height:46px; align-items:center; justify-content:center; border:1px solid #D4D2C7; border-radius:999px; background:transparent; cursor:pointer">
+        <span style="display:block; width:18px; height:1.5px; background:#121711"></span>
+        <span style="display:block; width:18px; height:1.5px; background:#121711"></span>
+      </button>
+    </sc-if>
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="width:100%; display:flex; flex-direction:column; gap:2px; padding-top:14px; margin-top:14px; border-top:1px solid #E6E4DB">
+        <a href="index.html#programmes" onClick="{{ closeMenu }}" style="font-size:18px; padding:14px 0; border-bottom:1px solid #E6E4DB">Programmes</a>
+        <a href="index.html#about" onClick="{{ closeMenu }}" style="font-size:18px; padding:14px 0; border-bottom:1px solid #E6E4DB">About</a>
+        <a href="#apply" onClick="{{ closeMenu }}" style="font-size:18px; padding:14px 0; color:#121711">Apply</a>
+      </div>
+    </sc-if>
+  </nav>
+
+
+  <section class="scan" style="position:relative; background:linear-gradient(180deg,#FBFAF7 0%,#F3F3EB 42%,#DCE6CE 100%); padding:clamp(48px,7vw,96px) clamp(20px,4vw,64px) clamp(48px,6vw,80px)">
+    <div style="max-width:900px; margin:0 auto; display:flex; flex-direction:column; align-items:center; text-align:center">
+      <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:22px">
+        <span style="width:8px; height:8px; border-radius:50%; background:#FF4B2E; animation:cg-breathe 3s ease-in-out infinite"></span>
+        <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#4A5044">12 weeks · beginner level</span>
+      </div>
+      <h1 style="font-weight:700; font-size:clamp(38px,7vw,88px); line-height:0.98; letter-spacing:-0.04em; margin:0; max-width:18ch; color:#121711; text-wrap:balance">AI Security Residency</h1>
+      <p style="margin:clamp(22px,3vw,34px) 0 0; font-size:clamp(17px,2vw,22px); line-height:1.5; max-width:52ch; color:#3A4136">A 12-week, beginner-level AI security programme. Content comes from the ARENA prerequisites and the AISB (AI Security Bootcamp) curriculum.</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:clamp(26px,3vw,36px)"><a href="https://forms.gle/F59EbQ2FyU92m2wbA" target="_blank" rel="noopener" style="font-size:16px; font-weight:700; background:#E33C1F; color:#FFFFFF; padding:14px 26px; border-radius:999px; display:inline-flex; align-items:center; white-space:nowrap">Register interest</a><a href="careers.html" style="font-size:15px; font-weight:600; border:1px solid #121711; color:#121711; padding:14px 26px; border-radius:999px; display:inline-flex; align-items:center; white-space:nowrap">See open roles</a></div>
+    </div>
+  </section>
+
+  <section style="background:#F2F1EA; padding:clamp(28px,3.5vw,44px) clamp(20px,4vw,64px)">
+    <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:clamp(24px,4vw,48px)">
+      <div style="display:flex; flex-direction:column; gap:8px"><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Length</div><div style="font-size:19px; font-weight:600; color:#121711">12 weeks</div></div>
+      <div style="display:flex; flex-direction:column; gap:8px"><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Level</div><div style="font-size:19px; font-weight:600; color:#121711">Beginner</div></div>
+      <div style="display:flex; flex-direction:column; gap:8px"><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Cohort</div><div style="font-size:19px; font-weight:600; color:#121711">About 20 fellows</div></div>
+      <div style="display:flex; flex-direction:column; gap:8px"><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Starts</div><div style="font-size:19px; font-weight:600; color:#121711">20 January 2027</div></div>
+      <div style="display:flex; flex-direction:column; gap:8px"><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558">Cost</div><div style="font-size:19px; font-weight:600; color:#121711">Free</div></div>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid #E6E4DB; max-width:1440px; margin:0 auto; padding:clamp(56px,7vw,96px) clamp(20px,4vw,64px)">
+    <h2 style="font-weight:700; font-size:clamp(32px,4.6vw,60px); line-height:1.0; letter-spacing:-0.045em; margin:0; max-width:14ch; color:#121711; max-width:22ch; margin-bottom:clamp(32px,4vw,56px)">How it works</h2>
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:clamp(28px,4vw,56px)"><div style="display:flex; flex-direction:column; gap:12px"><div aria-hidden="true" style="height:2px; background:#E33C1F; width:48px"></div><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558; margin-top:10px">Week 0</div><div style="font-weight:700; font-size:clamp(22px,2.4vw,28px); letter-spacing:-0.035em; color:#121711">Prerequisites and interview</div><p style="margin:0; font-size:17px; line-height:1.6; color:#3A4136">Two Harvard CS50 courses. The selection interview is based on them.</p></div><div style="display:flex; flex-direction:column; gap:12px"><div aria-hidden="true" style="height:2px; background:#E33C1F; width:48px"></div><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558; margin-top:10px">Weeks 1–3</div><div style="font-weight:700; font-size:clamp(22px,2.4vw,28px); letter-spacing:-0.035em; color:#121711">ARENA prerequisites</div><p style="margin:0; font-size:17px; line-height:1.6; color:#3A4136">Neural networks, linear algebra, probability, calculus and PyTorch, then the readiness gate.</p></div><div style="display:flex; flex-direction:column; gap:12px"><div aria-hidden="true" style="height:2px; background:#E33C1F; width:48px"></div><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558; margin-top:10px">Weeks 4–10</div><div style="font-weight:700; font-size:clamp(22px,2.4vw,28px); letter-spacing:-0.035em; color:#121711">AISB curriculum</div><p style="margin:0; font-size:17px; line-height:1.6; color:#3A4136">Practical AI security, with a mentor for every group of four fellows.</p></div><div style="display:flex; flex-direction:column; gap:12px"><div aria-hidden="true" style="height:2px; background:#E33C1F; width:48px"></div><div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#5C6558; margin-top:10px">Weeks 11–12</div><div style="font-weight:700; font-size:clamp(22px,2.4vw,28px); letter-spacing:-0.035em; color:#121711">Capstone</div><p style="margin:0; font-size:17px; line-height:1.6; color:#3A4136">Capstone project and presentations.</p></div></div>
+  </section>
+
+  <section style="border-top:1px solid #E6E4DB; max-width:1440px; margin:0 auto; padding:clamp(56px,7vw,96px) clamp(20px,4vw,64px)">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(28px,4vw,64px); align-items:start">
+      <h2 style="font-weight:700; font-size:clamp(32px,4.6vw,60px); line-height:1.0; letter-spacing:-0.045em; margin:0; max-width:14ch; color:#121711">Week 0: prerequisites and interview</h2>
+      <div>
+<p style="margin:0 0 18px; font-size:17px; line-height:1.65; color:#3A4136; max-width:62ch">Applicants complete these two courses before the programme. The selection interview is based on them.</p><div style="border-bottom:1px solid #E6E4DB; max-width:62ch"><div style="display:flex; gap:14px; padding:14px 0; border-top:1px solid #E6E4DB; font-size:17px; line-height:1.55; color:#3A4136"><span aria-hidden="true" style="color:#E33C1F; flex:none">—</span><span>Harvard CS50’s Introduction to Cybersecurity</span></div><div style="display:flex; gap:14px; padding:14px 0; border-top:1px solid #E6E4DB; font-size:17px; line-height:1.55; color:#3A4136"><span aria-hidden="true" style="color:#E33C1F; flex:none">—</span><span>Harvard CS50’s Introduction to Programming with Python</span></div></div><p style="margin:0 0 18px; font-size:17px; line-height:1.65; color:#3A4136; max-width:62ch; margin-top:22px">Interview (about 20 minutes): a short conversation. Applicants explain a few ideas from each course in their own words, write or read a small piece of Python, and say why they want to join and whether they can give the time. A place is offered if they show they understand the basics of both courses and can commit the time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid #E6E4DB; max-width:1440px; margin:0 auto; padding:clamp(56px,7vw,96px) clamp(20px,4vw,64px)">
+    <h2 style="font-weight:700; font-size:clamp(32px,4.6vw,60px); line-height:1.0; letter-spacing:-0.045em; margin:0; max-width:14ch; color:#121711; max-width:22ch; margin-bottom:clamp(32px,4vw,56px)">Curriculum</h2>
+<div style="overflow-x:auto"><table style="width:100%; min-width:560px; border-collapse:collapse; font-size:15.5px; line-height:1.55; color:#3A4136"><thead><tr><th style="text-align:left; padding:12px 18px 12px 0; border-bottom:1px solid #121711; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#5C6558; font-weight:600">Week</th><th style="text-align:left; padding:12px 18px 12px 0; border-bottom:1px solid #121711; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#5C6558; font-weight:600">Topics</th><th style="text-align:left; padding:12px 18px 12px 0; border-bottom:1px solid #121711; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#5C6558; font-weight:600">Based on</th></tr></thead><tbody><tr><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">1–3</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">Neural networks and linear algebra; probability, calculus, Python, NumPy and PyTorch; git, einops and einsum, and setup</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">ARENA prerequisites, AISB Day 0 setup</td></tr><tr><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">4</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">LLM internals: tokenization, chat templates, log probabilities</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">AISB 1.1–1.3</td></tr><tr><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">5</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">Prompt injection and securing model weights</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">AISB 1.4–1.5</td></tr><tr><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">6</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">Coding agents and AI control</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">AISB 2.1–2.4</td></tr><tr><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">7</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">LLM inference security: jailbreaking and guardrails</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">AISB 3.1–3.5</td></tr><tr><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">8</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">Training and data security: model editing and backdooring</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">AISB 4.1–4.4</td></tr><tr><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">9</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">Adversarial machine learning: attacks on vision and language models</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">AISB 5.1–5.4</td></tr><tr><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">10</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">Threat modeling and capstone planning</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">AISB 7.1</td></tr><tr><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">11–12</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">Capstone support and presentations</td><td style="padding:14px 18px 14px 0; border-bottom:1px solid #E6E4DB; vertical-align:top">Fellows’ projects</td></tr></tbody></table></div>
+  </section>
+
+  <section style="border-top:1px solid #E6E4DB; max-width:1440px; margin:0 auto; padding:clamp(56px,7vw,96px) clamp(20px,4vw,64px)">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(28px,4vw,64px); align-items:start">
+      <h2 style="font-weight:700; font-size:clamp(32px,4.6vw,60px); line-height:1.0; letter-spacing:-0.045em; margin:0; max-width:14ch; color:#121711">The readiness gate</h2>
+      <div>
+<p style="margin:0 0 18px; font-size:17px; line-height:1.65; color:#3A4136; max-width:62ch">At the end of Week 3, each fellow has a 10-minute live assessment with the lead instructor. The instructor asks about 5 questions picked at random from a bank covering Weeks 0 to 3, and fellows answer in their own words.</p><p style="margin:0 0 18px; font-size:17px; line-height:1.65; color:#3A4136; max-width:62ch">You need to pass it to start Week 4. A fellow who does not pass gets one retake the following week, and a fellow who does not pass the retake joins the next cohort.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid #E6E4DB; max-width:1440px; margin:0 auto; padding:clamp(56px,7vw,96px) clamp(20px,4vw,64px)">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(28px,4vw,64px); align-items:start">
+      <h2 style="font-weight:700; font-size:clamp(32px,4.6vw,60px); line-height:1.0; letter-spacing:-0.045em; margin:0; max-width:14ch; color:#121711">Teaching and mentoring</h2>
+      <div>
+<p style="margin:0 0 18px; font-size:17px; line-height:1.65; color:#3A4136; max-width:62ch">The lead instructor teaches a live session of about 2 hours each week in Weeks 1 to 10, on that week’s topics.</p><p style="margin:0 0 18px; font-size:17px; line-height:1.65; color:#3A4136; max-width:62ch">There are five mentors, one for each group of four fellows. They join when the core starts in Week 4, and each mentor meets their group every two weeks for an hour, goes through a practical exercise with them and helps them answer their questions.</p><p style="margin:0 0 18px; font-size:17px; line-height:1.65; color:#3A4136; max-width:62ch">Fellows log their daily tasks as Not started, Complete or Blocked in the activity tracker.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid #E6E4DB; max-width:1440px; margin:0 auto; padding:clamp(56px,7vw,96px) clamp(20px,4vw,64px)">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(28px,4vw,64px); align-items:start">
+      <h2 style="font-weight:700; font-size:clamp(32px,4.6vw,60px); line-height:1.0; letter-spacing:-0.045em; margin:0; max-width:14ch; color:#121711">Join the team</h2>
+      <div>
+<p style="margin:0 0 18px; font-size:17px; line-height:1.65; color:#3A4136; max-width:62ch">We are recruiting for this programme now.</p><div style="display:flex; gap:12px; flex-wrap:wrap"><a href="ai-security-instructor.html" style="font-size:15px; font-weight:600; border:1px solid #121711; color:#121711; padding:14px 26px; border-radius:999px; display:inline-flex; align-items:center; white-space:nowrap">Lead instructor →</a><a href="ai-security-mentors.html" style="font-size:15px; font-weight:600; border:1px solid #121711; color:#121711; padding:14px 26px; border-radius:999px; display:inline-flex; align-items:center; white-space:nowrap">Mentors / Teaching Assistants →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apply" class="scan" style="background:linear-gradient(180deg,#FBFAF7 0%,#C4D5AF 100%); padding:clamp(56px,7vw,110px) clamp(20px,4vw,64px)">
+    <div style="max-width:1440px; margin:0 auto; display:flex; flex-wrap:wrap; gap:36px; align-items:end; justify-content:space-between">
+      <div>
+        <h2 style="font-weight:700; font-size:clamp(30px,4.4vw,58px); line-height:1.0; letter-spacing:-0.045em; margin:0 0 18px; max-width:18ch; color:#121711">Register your interest</h2>
+        <p style="margin:0; font-size:17px; line-height:1.6; color:#2C3426; max-width:48ch">Fill in the form to register your interest in the AI Security Residency.</p>
+      </div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap"><a href="https://forms.gle/F59EbQ2FyU92m2wbA" target="_blank" rel="noopener" style="font-size:15px; font-weight:600; background:#121711; color:#FBFAF7; padding:15px 28px; border-radius:999px; display:inline-flex; align-items:center; white-space:nowrap">Register interest</a></div>
+    </div>
+  </section>
+
+  <footer id="footer" style="background:#F2F1EA; border-top:1px solid #E6E4DB; color:#4A5044; padding:clamp(56px,6vw,88px) clamp(20px,4vw,64px) 40px">
+    <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:clamp(32px,4vw,56px)">
+      <a href="index.html" style="display:flex; align-items:center; gap:12px; align-self:start">
+        <span style="width:10px; height:10px; border-radius:50%; background:#FF4B2E; display:block"></span>
+        <span style="font-weight:700; font-size:20px; letter-spacing:-0.035em; color:#121711">CoLoG</span>
+        <span style="width:1px; height:18px; background:#C9CDC1; display:block"></span>
+        <span style="font-weight:400; font-size:14px; letter-spacing:0.22em; color:#5C6558">AFRICA</span>
+      </a>
+      <div style="display:flex; flex-direction:column; gap:12px; font-size:14px">
+        <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#5E655A">Organisation</div>
+        <a href="index.html#about">About us</a><a href="careers.html">Careers</a><a href="mailto:info@colog.africa">Contact</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px; font-size:14px">
+        <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#5E655A">Programmes</div>
+        <a href="index.html#programmes">AI Paper Club</a><a href="residencies.html">CoLoG Residency</a><a href="ai-security-residency.html">AI Security Residency</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px; font-size:14px">
+        <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#5E655A">Elsewhere</div>
+        <a href="https://www.linkedin.com/company/colog-africa/" target="_blank" rel="noopener">LinkedIn</a><a href="index.html#footer">X</a><a href="index.html#footer">Newsletter</a>
+      </div>
+    </div>
+    <div style="max-width:1440px; margin:clamp(40px,5vw,72px) auto 0; padding-top:24px; border-top:1px solid #E6E4DB; display:flex; flex-wrap:wrap; gap:20px; justify-content:space-between; font-size:13px; color:#5E655A">
+      <div>Chandos Gardens, LS8 1LW, United Kingdom</div>
+      <div>© 2026 CoLoG Africa</div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:2400}}">
+class Component extends DCLogic {
+  state = { w: typeof window !== "undefined" ? window.innerWidth : 1200, menuOpen: false };
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener("resize", this.onResize);
+  }
+  componentWillUnmount() { window.removeEventListener("resize", this.onResize); }
+  renderVals() {
+    const wide = this.state.w >= 860;
+    return {
+      wide,
+      narrow: !wide,
+      menuOpen: !wide && this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false })
+    };
+  }
+}
+</script>
+</body>
+</html>
